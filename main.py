@@ -25,18 +25,14 @@ def find_mismatch(text):
     return "Success"
 
 def main():
-    input_type = input("Choose input type (F for file, I for input): ")
-    if input_type == "F":
-        filename = input("Enter filename: ")
-        with open(filename, "r") as file:
-            text = file.read().strip()
-    elif input_type == "I":
-        text = input("Enter brackets: ").strip()
-    else:
-        print("Invalid input type")
-        return
+    input_type = input()
+    text = input()
     mismatch = find_mismatch(text)
-    print(mismatch)
+
+    if(mismatch) != None:
+        print(mismatch)
+    else:
+        print("Success")
 
 
 if __name__ == "__main__":
